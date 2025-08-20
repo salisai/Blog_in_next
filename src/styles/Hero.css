@@ -1,0 +1,132 @@
+/* src/styles/Hero.css */
+
+/* General Hero Section Styling */
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;  /* Full height of the screen */
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-container {
+  max-width: 1000px;  /* Max width for better control */
+  width: 100%;
+}
+
+/* Styling for the text (Name, Profession, and Description) */
+.hero-text h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.hero-text h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #c0c0c0; /* Slightly lighter color for the profession */
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #c0c0c0;
+  line-height: 1.6; /* Better line spacing for readability */
+  margin-top: 20px;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.hero-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  min-width: 180px;
+  justify-content: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hero-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-out;
+}
+
+.hero-button:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+
+/* Icon spacing */
+.btn-icon {
+  font-size: 1.1rem;
+}
+
+/* Solid button */
+.hero-button.solid {
+  background-color: #111;
+  color: white;
+  border: 2px solid #111;
+}
+
+.hero-button.solid:hover {
+  background-color: #000;
+  border-color: #000;
+}
+
+/* Outline button */
+.hero-button.outline {
+  background-color: transparent;
+  border: 2px solid #ccc;
+  color: #ffffff;
+}
+
+.hero-button.outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-color: white;
+}
+
+
+
+/* Styling for responsiveness */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 3rem; /* Reduce font size for smaller screens */
+  }
+
+  .hero-text h3 {
+    font-size: 1.5rem; /* Slightly smaller profession font size */
+  }
+
+  .hero-text p {
+    font-size: 1rem;  /* Smaller paragraph text for mobile */
+    margin-top: 15px;
+  }
+}

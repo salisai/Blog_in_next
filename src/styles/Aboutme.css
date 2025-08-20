@@ -1,0 +1,44 @@
+/* src/styles/AboutMe.css */
+
+/* General About Me Section Styling */
+.about-me-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Full height of the screen */
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .about-me-container {
+    max-width: 1000px;  /* Max width for better control */
+    width: 100%;
+  }
+  
+  .about-me-container h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .about-me-container p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #c0c0c0;  /* Light color for the description */
+    line-height: 1.6;
+    margin-top: 10px;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .about-me-container h2 {
+      font-size: 2.5rem;  /* Slightly smaller title on mobile */
+    }
+  
+    .about-me-container p {
+      font-size: 1rem;  /* Smaller paragraph text on mobile */
+    }
+  }
+  
