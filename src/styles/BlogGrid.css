@@ -1,0 +1,34 @@
+.blog-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column on mobile */
+  gap: 2rem;
+  padding: 1rem; /* Small padding on mobile */
+  max-width: 100%; /* Full width for small screens */
+  margin: 0 auto;
+}
+
+/* Tablets and small laptops */
+@media (min-width: 768px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    max-width: 900px; /* Centered narrower layout */
+    padding: 2rem; 
+  }
+}
+
+/* Larger desktops */
+@media (min-width: 1200px) {
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    max-width: 1200px;
+    padding: 3rem;
+  }
+}
+
+/* Ultra wide screens (like 1400px and above) */
+@media (min-width: 1400px) {
+  .blog-grid {
+    max-width: 1400px; /* Restrict width */
+    padding: 4rem; /* More left/right breathing space */
+  }
+}
